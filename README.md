@@ -1,6 +1,61 @@
 # Blockchain-Developer-Interview-Questions-and-Answers
 
 If I was a hiring manager?
+Have a look at some of the EIP. What they will be asking is most likely some depth questions such as difference between call data and memory and other stuff. All the best.
+
+
+
+Some basic questions related to blockchain like what are nodes, blocks, transactions etc.
+
+How DeFi works and some examples of DeFi projects: I explained basic DeFi architecture, AMM and some mathematical concepts working behind the scenes like constant multiplication formula.
+
+What are Zk-SNARKS? Difference between optimistic rollups and zk rollups. : I explained most of things at engineering level.
+
+what you have learned so far and why would you like to join the internship program? : Be genuine and dont fake anything.
+
+Few general questions were there related to latest happening in blockchain space like DAO, NFTs, MEV, flashloans.
+What Zero-knowledge application do I hope to see.
+
+What ETH2 is all about. Had to explain PoS and a couple of stuff.
+
+My knowledge of what Nethermind does.
+
+My interests
+
+Had a couple of personal projects in my resume. So, I was asked to explain one of them from scratch and how I went about implementing it.
+How did the DAO hack happen? How can you avoid doing the same thing in your contract?
+
+eentry using a proxy contract where the default payable fallback recalls the withdraw function.
+
+Solve it by updating balances before executing the withdraw and checking the return values of ether transfer. Use transfer over send, as transfer reverts.
+
+I believe it’s also advised to use transfer over other functions to transact
+
+There are some dangers in using send: The transfer fails if the call stack depth is at 1024 (this can always be forced by the caller) and it also fails if the recipient runs out of gas. So in order to make safe Ether transfers, always check the return value of send, use transfer or even better: Use a pattern where the recipient withdraws the money.
+What is the stack depth? What is the maximum number of stack items you can access in a single operation? Explain, in detail, the difference between memory and the stack?
+
+What is the difference between Call, Saticcall and DelegateCall?
+What is the most gas-efficient way to store data?
+
+What is Parity Wallet lock?
+
+Explain elliptic curve key pairs?
+Explain how a contract can be upgraded after deployed? Read upgradable section in Open Zeppelin docs
+
+What are all the function access modifiers? search solidity docs in functions section
+
+When should you emit events? when the state changes in a way that would be helpful to track offchain
+
+What's the most gas efficient way to implement double value mapping? hash the two variables together and use that as a key in the mapping
+
+What's 1 common security pitfall and how to avoid it? this is pretty open ended, but start with re-entrency probably.
+
+If you want to multiply by a decimal how is that implemented using uints? say you want multiple 10,000 by 0.05. This is the same as 10000 * 5 / 100
+
+What's the largest and smallest uint sizes? uint8, uint256
+https://dzone.com/articles/how-to-pass-interview-on-solidity-part-1
+
+
 
 Calling each function, we can see that the public function uses 496 gas, while the external function uses only 261.
 
